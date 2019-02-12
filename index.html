@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Brian's Blog</title>
+	<link href="css/blog.css" type="text/css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Griffy|Fruktur" rel="stylesheet">
+</head>
+<body>
+	<div id="title">
+		<img src="https://scontent-hkg3-1.cdninstagram.com/vp/8ee28de6acd5a70e6d16cfbdd8dffc12/5CED4C86/t51.2885-15/e35/11875517_903925306339444_2058148216_n.jpg?_nc_ht=scontent-hkg3-1.cdninstagram.com" alt="Tsung-Han Lee's Profile"/>
+		<div class="resume">
+			<h1>Tsung-Han Lee</h1>
+			<ul>
+				<li>Member &nbsp;&nbsp; @ TEA Lab</li>
+				<li>Master's &nbsp;&nbsp; @ NTHU</li>
+				<li>Bachelor's @ NTHU</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="post_container">
+		<div class="post">
+			<h3>January 31<sup>st</sup> 2019</h3>
+			<h2>Customizing Ubuntu Prompt</h2>
+			
+			<blockquote cite="">
+				Follow easy steps to get a colorful bash developing environment.
+			</blockquote>
+
+			<p>
+				Add following code into <code class="inline">~/.bashrc</code> file.
+				<code>
+					1  # Customize Prompt										<br/>
+					2  PS1="${debian_chroot:+($debian_chroot)}\[${bold}\]\n" ;	<br/>
+					3  PS1+="\[\033[1;33m\]\u" ; #user							<br/>
+					4  PS1+="\[\033[00m\] at " ;								<br/>
+					5  PS1+="\[\033[33m\]\h" ; #host							<br/>
+					6  PS1+="\[\033[00m\] in " ;								<br/>
+					7  PS1+="\[\033[32m\]\W" ; #working_directory				<br/>
+					8  PS1+="\n" ;												<br/>
+					9  PS1+="\[\033[00m\]\$ \[\033[0m\]" ;						<br/>
+					10 export PS1 ;												<br/>
+				</code>
+			</p>
+		</div>
+
+		<hr/>
+
+		<div class="post">
+			<h3>January 30<sup>th</sup> 2019 </h3>
+			<h2>Color Scheme for vim</h2>
+			
+			<blockquote cite="">
+				Follow easy steps to get a colorful vim developing environment.
+			</blockquote>
+
+			<p>
+				First, pick your fav color scheme from <a href="http://www.vim.org/scripts/script_search_results.php?keywords=&script_type=color+scheme&order_by=rating&direction=descending&search=search">HERE</a>!!
+				Then, add it to the following directory 
+				<code>$ ~/.vim/colors/</code> 
+				If the directory is not exists, create it with following command
+				<code>$ mkdir -p ~/.vim/colors/ </code>
+			</p>
+			
+			<p>
+				Finally, edit the <code class="inline">.vimrc</code> file in <code class="inline">~</code>
+				<code>$ vim ~/.vimrc</code>
+					<code>
+						1 " FILE		: .vimrc"						<br/>
+						2 " DESCRIPTION	: my vim envrionment setting "	<br/>
+						3  syntax on									<br/>
+						4  colorscheme COLOR_SCHEME_NAME				<br/>	
+						5  set t_Co=256									<br/>
+						6  set tabstop=4								<br/>
+						7  set shiftwidth=4								<br/>
+						8  set number									<br/>
+						9  set hlsearch									<br/>
+						10  set autoindent								<br/>
+						11  set ruler									<br/>
+						12 set showmode									<br/>
+						13 highlight Comment ctermfg=cyan				<br/>
+						14 highlight Search term=reverse ctermbg=4 ctermfg=7<br/>
+						15 "Above is my vim environment setting"			<br/>
+					</code>
+			</p>
+
+			<p>
+				<strong>Note:</strong> 
+				<ul>
+				    <li>first line for enabling the color</li>
+				    <li>second line to select color scheme name, ex: COLOR_SCHEME_NAME = lucid (not need to add .vim)</li>
+				    <li>third line to enable 256 colors.</li>
+				    <li>forth line to set tab size = 4 space</li>
+				    <li>fifth line to set auto indent size = 4 space</li> 
+				</ul>
+			</p>
+		</div>
+		<hr/>
+	</div>
+
+	<footer>
+		<p>Telecom Electroacoustic Audio Lab 2019</p>
+	</footer>
+</body>
+</html>

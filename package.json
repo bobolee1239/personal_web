@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "express": "3.x"
+  },
+  "description": "a naive chat server.",
+  "name": "brian_web",
+  "private": true,
+  "version": "0.0.1",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tsung-Han Brian Lee",
+  "license": "MIT"
+}
